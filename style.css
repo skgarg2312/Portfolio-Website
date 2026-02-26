@@ -51,20 +51,91 @@ nav a:active,
     color: red;
 }
 
-.slider-none{
+.slider-none {
     display: none;
 }
 
-#btn-sliderOpen{
+#btn-sliderOpen {
     display: none;
+}
+
+/* About Section */
+section {
+    height: 85vh;
+    margin-bottom: 20px;
+}
+
+#about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aboutChild {
+    width: 45%;
+}
+
+.image-sk img {
+    width: 450px;
+}
+
+.about-sk h1 {
+    text-align: left;
+    padding: 5px;
+    border-radius: 4px;
+    margin: 20px;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
+    font-style: italic;
+    color: black;
+    display: inline;
+    margin-bottom: 10px;
+    animation: sk-heading 4s infinite alternate;
+}
+
+@keyframes sk-heading {
+    0% {
+        background-color: rgb(226, 151, 151);
+    }
+
+    25% {
+        background-color: rgb(159, 238, 238);
+    }
+
+    50% {
+        background-color: rgb(243, 243, 137);
+    }
+
+    75% {
+        background-color: rgb(166, 231, 166);
+    }
+
+    100% {
+        background-color: rgb(226, 151, 151);
+    }
+}
+
+.about-sk p {
+    margin-top: 30px;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 16px;
+    /* width: 350px; */
+    line-height: 25px;
 }
 
 @media screen and (max-width:720px) {
-    nav a{
+    /* Header Section */
+    header div h3 {
+        font-size: 16px;
+    }
+
+    nav a {
         display: none;
     }
 
-    #btn-sliderOpen{
+    #btn-sliderOpen {
         display: block !important;
         font-size: 25px;
         position: fixed;
@@ -73,7 +144,7 @@ nav a:active,
         cursor: pointer;
     }
 
-    #btn-sliderClose{
+    #btn-sliderClose {
         width: 25px;
         height: 25px;
         font-size: 20px;
@@ -86,8 +157,8 @@ nav a:active,
         cursor: pointer;
     }
 
-    .slider-block{
-        padding-top:100px ;
+    .slider-block {
+        padding-top: 100px;
         width: 80%;
         height: 100vh;
         text-align: center;
@@ -101,6 +172,34 @@ nav a:active,
         right: 0px;
         z-index: 5;
     }
+    
+    /* About Section */
+    #about{
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 500px;
+    }
 
+    .aboutChild{
+        width: 80%;
+        text-align: center;
+        height: 400px ;
+    }
 
+    .about-sk{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-sk h1{
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .image-sk img{
+        width: 90%;
+    }
 }
